@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive HTML Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0 10px;
+    }
+
+    h1 {
+      color: green;
+      font-size: 7vw;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 5vw;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 3vw;
+      text-align: justify;
+      margin: 20px 0;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .picture-demo {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .picture-demo picture {
+      display: block;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .flexbox-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .flexbox-container button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .multicolumn-section {
+      background-color: aqua;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .multicolumn-text {
+      column-count: 3;
+      column-gap: 5%;
+      column-width: 200px;
+      font-size: 20px;
+      text-align: left;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    /* Media Query */
+    @media screen and (max-width: 800px) {
+      body {
+        background-color: aqua;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      .flexbox-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Responsive Design</h1>
+  <h2>Understanding Responsive Web Pages</h2>
+
+  <p>HTML (HyperText Markup Language) is the standard language used to create web pages. It structures content using various tags. When combined with CSS and JavaScript, HTML helps in building interactive and visually appealing websites. Responsive design ensures content adjusts beautifully across all device sizes.</p>
+
+  <!-- Responsive Image using width and max-width -->
+  <div class="image-container">
+    <h2>Responsive Image (width and max-width)</h2>
+    <p>This image scales up and down with screen width using <code>width: 100%</code> and <code>max-width</code>.</p>
+    <img src="2.jpg" alt="Responsive Image Example">
+  </div>
+
+  <!-- Picture element for different resolutions -->
+  <div class="picture-demo">
+    <h2>Picture Element for Browser Width</h2>
+    <p>Depending on the browser width, different image resolutions are loaded for optimized performance.</p>
+    <picture>
+      <source media="(min-width: 700px)" srcset="2.avif">
+      <source media="(min-width: 450px)" srcset="2.avif">
+      <img src="2.avif" alt="Responsive by Picture Tag">
+    </picture>
+  </div>
+
+  <!-- Flexbox Layout -->
+  <div class="flexbox-container">
+    <button>HTML</button>
+    <button>CSS</button>
+    <button>JavaScript</button>
+  </div>
+
+  <!-- MultiColumn Section -->
+  <div class="multicolumn-section">
+    <h2>HTML Description in Multiple Columns</h2>
+    <div class="multicolumn-text">
+      HTML, or HyperText Markup Language, is the foundation of web development. It allows you to structure content with elements such as headings, paragraphs, images, links, and more. HTML is not a programming language but a markup language that tells the browser how to display text and media. With HTML5, newer semantic tags and multimedia support make building websites more efficient and accessible.
+    </div>
+  </div>
+
+  <!-- Optional iframe embedding the same content -->
+  <iframe srcdoc="
+    <html>
+    <head><style>
+      body{background:aqua;font-family:sans-serif;padding:20px}
+      h3{color:#333}
+      p{text-align:justify;columns:3;column-gap:5%}
+    </style></head>
+    <body>
+      <h3>Embedded HTML Info</h3>
+      <p>HTML stands for HyperText Markup Language and is used to create the structure of web pages. With HTML5, developers gained access to new semantic elements and native support for video and audio.</p>
+    </body>
+    </html>
+  ">
+  </iframe>
+
+</body>
+</html>
