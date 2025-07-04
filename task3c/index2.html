@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Demo with All Features</title>
+    <style type="text/css">
+        /* 1. Page background image with repeat */
+        body {
+            background-image: url('1.jpg'); /* Replace with actual image */
+            background-repeat: repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Headline styled text */
+        b.headline {
+            color: red;
+            font-size: 22px;
+            text-decoration: underline;
+        }
+
+        /* 3. Link styles */
+        a:link {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: purple;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: orange;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        /* 4. Customized cursors */
+        .xlink {
+            cursor: crosshair;
+        }
+
+        .hlink {
+            cursor: help;
+        }
+
+        /* 5. Background image for a single element */
+        .highlight-box {
+            background-image: url('2.avif'); /* Replace with actual image */
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 15px;
+            border: 2px solid black;
+            width: 300px;
+            color: rgb(231, 27, 204);
+            margin-top: 20px;
+        }
+
+        /* 6. Layering with z-index */
+        .layer1-top {
+            position: relative;
+            font-size: 50px;
+            z-index: 2;
+        }
+
+        .layer2-bottom {
+            position: relative;
+            top: -50px;
+            left: 5px;
+            color: red;
+            font-size: 80px;
+            z-index: 1;
+        }
+
+        .layer1-bottom {
+            position: relative;
+            font-size: 50px;
+            z-index: 3;
+        }
+
+        .layer2-top {
+            position: relative;
+            top: -50px;
+            left: 5px;
+            color: red;
+            font-size: 80px;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+
+    <b>This is normal bold</b><br><br>
+
+    <!-- Links with custom cursors -->
+    <a href="mypage.htm" class="xlink">CROSS LINK</a><br>
+    <a href="mypage.htm" class="hlink">HELP LINK</a><br><br>
+
+    <!-- Headline text -->
+    <b class="headline">This is headline style bold</b><br><br>
+
+    <!-- Single element with background image -->
+    <div class="highlight-box">
+        This box has a background image without repetition.
+    </div><br><br>
+
+    <!-- Layer example: Layer 1 on top -->
+    <div class="layer1-top">LAYER 1 (on top)</div>
+    <div class="layer2-bottom">LAYER 2 (behind)</div><br><br>
+
+    <!-- Layer example: Layer 2 on top -->
+    <div class="layer1-bottom">LAYER 1 (behind)</div>
+    <div class="layer2-top">LAYER 2 (on top)</div>
+
+</body>
+</html>
