@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Spotify</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: aqua;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .gfg {
+      font-size: 5vw;
+      font-weight: bold;
+      color: green;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 0 20px 40px;
+      text-align: center;
+    }
+
+    .grid-item {
+      background-color: rgb(220, 208, 232);
+      border: 2px solid rgb(70, 54, 84);
+      font-size: x-large;
+      padding: 30px 0;
+      border-radius: 10px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .grid-item:hover {
+      background-color: rgb(200, 190, 220);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="gfg">Spotify</div>
+  <div class="container">
+    <div class="grid-item">HTML</div>
+    <div class="grid-item">CSS</div>
+    <div class="grid-item">JavaScript</div>
+    <div class="grid-item">Bootstrap</div>
+  </div>
+</body>
+</html>
