@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX Student CGPA Search</title>
+  <style>
+    input {
+      padding: 0.5rem 1rem;
+      margin-top: 10px;
+    }
+    label {
+      font-size: 1rem;
+      color: black;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color:green;">AJAX Example</h1>
+  <h3>Ajax Database Operations</h3>
+  <hr><br>
+
+  <!-- Form Section -->
+  <div class="form-group">
+    <label for="cgpa_val">Enter the CGPA: </label>
+    <input type="text" id="cgpa_val" name="stu_cgpa">
+    <input type="button" onclick="ajax_fun()" value="Submit">
+  </div>
+
+  <hr>
+  <!-- Result Section -->
+  <div id="result-box">Result will display here</div>
+
+  <script>
+    function ajax_fun() {
+      var str = document.getElementById('cgpa_val').value;
+
+      if (str === "") {
+        document.getElementById("result-box").innerHTML = "⚠ Please enter a valid CGPA.";
+        return;
+      }
+
+      const ajax_Request = new XMLHttpRequest();
+      ajax_Request.onreadystatechange = function() {
+        if (ajax_Request.readyState == 4 && this.status == 200) {
+          document.getElementById("result-box").innerHTML = ajax_Request.responseText;
+        }
+      };
+
+      console.log("CGPA passed to server: " + str);
+      ajax_Request.open("GET", "index.php?q=" + encodeURIComponent(str), true);
+      ajax_Request.send();
+    }
+  </script>
+</body>
+</html>
